@@ -29,7 +29,8 @@
 示例代码：
 * 创建MQTTPahoManager对象并进行连接：
 
-        IMQTT imqtt = new IMQTT(){
+        MQTTPahoManager mqttPahoManager = new MQTTPahoManager(context , serverUri ,
+        clientId , userName ,  password , subscribeTopics , new IMQTT(){
             @Override
             public void onConnectSuccess(IMqttToken asyncActionToken) {
                 //TODO:连接成功
@@ -59,10 +60,7 @@
             public void onDeliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
                 //TODO:消费完成
             }
-        };
-
-        MQTTPahoManager mqttPahoManager = new MQTTPahoManager(context , serverUri ,
-        clientId , userName ,  password , subscribeTopics , imqtt);
+        });
         
 * 发送消息
 
