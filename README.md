@@ -24,7 +24,7 @@
 
 示例代码：
 * 创建MQTTPahoManager对象并进行连接：
-  IMQTT imqtt=        new IMQTT(){
+        IMQTT imqtt = new IMQTT(){
             @Override
             public void onConnectSuccess(IMqttToken asyncActionToken) {
                 //TODO:连接成功
@@ -56,4 +56,14 @@
             }
         };
 
-  new MQTTPahoManager(Context context, String serverUri, String clientId, @Nullable String userName, @Nullable String password, @Nullable final String subscribeTopics, IMQTT imqtt);
+        MQTTPahoManager mqttPahoManager = new MQTTPahoManager(context , serverUri , clientId , userName ,  password , subscribeTopics , imqtt);
+        
+* 发送消息
+
+      //retained为true将会允许消息被多次消费
+      mqttPahoManager.publishMessage(String publishTopic, String msg, boolean retained);
+      
+* 订阅Topic
+
+      mqttPahoManager.subscribeTopics("myTopic");
+      
