@@ -2,9 +2,11 @@
 用于安卓客户端的MQTT工具
 
 使用方法：
+
 0、导入MQTT Paho库：
 
   在项目的Build.gradle中添加：
+  
   implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
   implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
   
@@ -24,6 +26,7 @@
 
 示例代码：
 * 创建MQTTPahoManager对象并进行连接：
+
         IMQTT imqtt = new IMQTT(){
             @Override
             public void onConnectSuccess(IMqttToken asyncActionToken) {
@@ -67,3 +70,6 @@
 
       mqttPahoManager.subscribeTopics("myTopic");
       
+* 断开连接
+
+      mqttPahoManager.disconnect();
