@@ -21,8 +21,10 @@
   具体版本号以MQTT Paho Wiki为准（https://github.com/eclipse/paho.mqtt.android）
   
 1、在Android Studio中点击File->New->Import module，导入这个库
+
 2、添加权限：
-<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 示例代码：
 * 创建MQTTPahoManager对象并进行连接：
