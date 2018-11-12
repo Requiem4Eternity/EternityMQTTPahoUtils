@@ -61,7 +61,8 @@
             }
         };
 
-        MQTTPahoManager mqttPahoManager = new MQTTPahoManager(context , serverUri , clientId , userName ,  password , subscribeTopics , imqtt);
+        MQTTPahoManager mqttPahoManager = new MQTTPahoManager(context , serverUri ,
+        clientId , userName ,  password , subscribeTopics , imqtt);
         
 * 发送消息
 
