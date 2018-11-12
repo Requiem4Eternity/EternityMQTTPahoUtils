@@ -7,16 +7,16 @@
 
   在项目的Build.gradle中添加：
   
-  implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-  implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
   
-  buildscript {
-    repositories {
-        maven {
-           url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
-         }
-      }
- }
+    buildscript {
+      repositories {
+          maven {
+             url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+           }
+        }
+    }
  
   具体版本号以MQTT Paho Wiki为准（https://github.com/eclipse/paho.mqtt.android）
   
